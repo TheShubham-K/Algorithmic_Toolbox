@@ -23,3 +23,8 @@ Specialization consists of 6 courses:
 10.[Week 4 Divide And Conquer](week4_divide_and_conquer)
 11.[Week 5 Dynamic Programming 1](week5_dynamic_programming1)
 12.[Week 6 Dynamic Programming 2](week6_dynamic_programming2) 
+
+
+#Contact 
+
+The best way to get in touch with me is [on Instagram](https://www.instagram.com/subham.kumar032/).
