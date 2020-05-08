@@ -25,6 +25,6 @@ Specialization consists of 6 courses:
 12. [Week 6 Dynamic Programming.](week6_dynamic_programming2) 
 
 
-#Contact 
+# Contact 
 
 The best way to get in touch with me is [on Instagram](https://www.instagram.com/subham.kumar032/).
