@@ -3,7 +3,12 @@ import sys
 
 def get_change(m):
     #write your code here
-    return m
+    count = int(m/10)
+    remain = m % 10
+    count += int(remain / 5)
+    remain = remain % 5
+    count += remain
+    return count
 
 if __name__ == '__main__':
     m = int(sys.stdin.read())
