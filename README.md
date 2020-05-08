@@ -17,3 +17,9 @@ Specialization consists of 6 courses:
 4. Algorithms on Strings
 5. Advanced Algorithms and Complexity
 6. Genome Assembly Programming Challenge
+7. [Week 1 Programming Challenge](week1_programming_challenges)
+8. [Week 2 Algorithmic Warmup](week2_algorithmic_warmup)
+9. [Week 3 Greedy Algorithms](week3_greedy_algorithms)
+10.[Week 4 Divide And Conquer](week4_divide_and_conquer)
+11.[Week 5 Dynamic Programming 1](week5_dynamic_programming1)
+12.[Week 6 Dynamic Programming 2](week6_dynamic_programming2) 
