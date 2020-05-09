@@ -23,53 +23,73 @@ using namespace std;
                 => O(n + 1) => O(n)
     */
 
-int minRefills(int n, vector<int> x, int dist_with_full_tank)
-{
-    int numRefills = 0, currentRefills = 0;
-    int lastRefills = 0;
-    //cout<<"Stops where you need to get refilling:";
-    while(currentRefills < (n - 1))
+int compute_min_refills(int d, int tank, vector<int> & stops,int n) {
+    // write your code here
+    int start = 0, end = 0, count = 0, i = 0;
+    int lind = n;
+    if (tank >= d)
     {
-        lastRefills = currentRefills;
-        while((currentRefills < (n - 1)) && (x[currentRefills + 1] - x[lastRefills] <= dist_with_full_tank))
+        return 0;
+    }
+    while (start < d)
+    {
+        int check = 0;
+        while (i < n && (stops[i] - start) <= tank)
         {
-            currentRefills++;
-            if(currentRefills == (n - 1))
-                break;
+            end = stops[i];
+            i++;
+            check++;
         }
-        //cout<<a[lastRefills]<<'\n';
-        if(currentRefills == lastRefills)
-        // This happens when gas station is far away that even full tank of fuel 
-        // could not make up
+        if (end == stops[lind - 1])
+        {
+            if (d - start <= tank)
+            {
+                return count;
+            }
+            else
+            {
+                /*if (d - end <= tank)
+                {
+                    count++;
+                    return count;
+                }
+                else*/
+                if(d-end>tank)
+                {
+                    return -1;
+                }
+            }
+        }
+        if (check == 0)
+        {
             return -1;
-        if(currentRefills < (n - 1))
-            numRefills++;
+        }
+        else
+        {
+            count++;
+            //cout << end << " ";
+            start = end;
+        }
     }
-    return numRefills;
+    return count;
 }
 
-int main()
-{
+int main() {
+    int d = 0;
+    cin >> d;
+    int m = 0;
+    cin >> m;
     int n = 0;
-    vector<int> x;
-    int dist_with_full_tank = 0;
+    cin >> n;
 
-    //cout<<"Give n:"
-    cin>>n;
-    int temp = 0;
-    //cout<<"Give gas station stops in kms:";
-    for(int i = 0; i < n; i++)
-    {
-        cin>>temp;
-        x.push_back(temp);
-    }
-    //cour<<"Give Mileage per full tank:";    
-    cin>>dist_with_full_tank;
+    vector<int> stops(n);
+    for (size_t i = 0; i < n; ++i)
+        cin >> stops.at(i);
 
-    //cout<<"Number of refilling required:";
-    cout<<minRefills(n, x, dist_with_full_tank)<<'\n';
+    cout << compute_min_refills(d, m, stops, n) << "\n";
+
+    return 0;
 }
-
 
 
 
