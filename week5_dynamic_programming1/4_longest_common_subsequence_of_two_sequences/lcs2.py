@@ -1,10 +1,20 @@
-#Uses python3
-
 import sys
 
 def lcs2(a, b):
     #write your code here
-    return min(len(a), len(b))
+    L = [[0 for x in range(len(b) + 1)] for x in range(len(a) + 1)]
+    ins = [0]*4
+    for i in range(len(a)):
+        for j in range(len(b)):
+            ins[0] = L[i-1][j]
+            ins[1] = L[i][j-1]
+            mis    = L[i-1][j-1]
+            mat    = L[i-1][j-1] + 1
+            if a[i-1] == b[j-1]:
+                L[i][j] = max(max(ins), mat)
+            else:
+                L[i][j] = max(ins)
+    return L[i][j]
 
 if __name__ == '__main__':
     input = sys.stdin.read()
