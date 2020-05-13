@@ -1,35 +1,42 @@
-import sys, random, time
+import sys
+import random
+import time
 
-def lcs2(a, b):
-    m =len(a)
-    n =len(b)
-    #write your code here
-    L = [[0 for x in range(n + 1)] for x in range(m + 1)]
-    ins = [0]*4
+
+def lcs2(m, wt, val, n):
+    # write your code here
+    L = [[None]*(n + 1) for x in range(m + 1)]
     for i in range(m+1):
         for j in range(n+1):
-            if a[i-1] == b[j-1]:
+            if i == 0 or j == 0:
+                L[i][j] = 0
+            elif val[i-1] == wt[j-1]:
                 L[i][j] = L[i-1][j-1] + 1
             else:
                 L[i][j] = max(L[i-1][j], L[i][j-1])
-    return L[m][n]
+    return L[n][m]
+
+
 if __name__ == '__main__':
-    
-    input = sys.stdin.read()
-    data = list(map(int, input.split()))
 
-    n = data[0]
-    data = data[1:]
-    a = data[:n]
+    n = int(input())
+    val = list(map(int, input().split()))
+    m = int(input())
+    wt = list(map(int, input().split()))
+    print(lcs2(m, wt, val, n))
+    # input = sys.stdin.read()
+    # data = list(map(int, input.split()))
 
-    data = data[n:]
-    m = data[0]
-    data = data[1:]
-    b = data[:m]
+    # n = data[0]
+    # data = data[1:]
+    # a = data[:n]
 
-    print(lcs2(a, b))
-   
-   
+    # data = data[n:]
+    # m = data[0]
+    # data = data[1:]
+    # b = data[:m]
+
+
 #    an = random.randint(0, 100)
 #    a =[]
 #    for i in range(an):
@@ -44,6 +51,4 @@ if __name__ == '__main__':
 #    result = lcs2(a, b)
 #    end = time.time()
 #    print(result)
-#    print('the running time is %0.5f s' % (end-start))   
-    
-    
+#    print('the running time is %0.5f s' % (end-start))
