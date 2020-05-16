@@ -1,4 +1,6 @@
 # python3
+from itertools import chain
+
 
 class Query:
 
@@ -17,13 +19,14 @@ class QueryProcessor:
     def __init__(self, bucket_count):
         self.bucket_count = bucket_count
         # store all strings in one list
-        self.elems = []
+        self.elems = {}
+        #self.elems = []
 
     def _hash_func(self, s):
         ans = 0
         for c in reversed(s):
             ans = (ans * self._multiplier + ord(c)) % self._prime
-        return ans % self.bucket_count
+        return (ans % self.bucket_count + self.bucket_count) % self.bucket_count
 
     def write_search_result(self, was_found):
         print('yes' if was_found else 'no')
@@ -37,26 +40,45 @@ class QueryProcessor:
     def process_query(self, query):
         if query.type == "check":
             # use reverse order, because we append strings to the end
-            self.write_chain(cur for cur in reversed(self.elems)
-                        if self._hash_func(cur) == query.ind)
-        else:
-            try:
-                ind = self.elems.index(query.s)
-            except ValueError:
-                ind = -1
-            if query.type == 'find':
-                self.write_search_result(ind != -1)
-            elif query.type == 'add':
-                if ind == -1:
-                    self.elems.append(query.s)
+            if query.ind in self.elems:
+                self.write_chain(
+                    cur for cur in reversed(self.elems[query.ind]))
             else:
-                if ind != -1:
-                    self.elems.pop(ind)
+                print(' ')
+                # if self._hash_func(cur) == query.ind)
+        else:
+            hash_key = self._hash_func(query.s)
+            ind = hash_key in self.elems
+            if query.type == 'find':
+                self.write_search_result(
+                    ind and query.s in self.elems[hash_key])
+            elif query.type == 'add':
+                if not ind:
+                    self.elems[hash_key] = [query.s]
+                else:
+                    if not query.s in self.elems[hash_key]:
+                        self.elems[hash_key].append(query.s)
+            else:
+                if ind and query.s in self.elems[hash_key]:
+                    self.elems[hash_key].remove(query.s)
+            # try:
+            #     ind = self.elems.index(query.s)
+            # except ValueError:
+            #     ind = -1
+            # if query.type == 'find':
+            #     self.write_search_result(ind != -1)
+            # elif query.type == 'add':
+            #     if ind == -1:
+            #         self.elems.append(query.s)
+            # else:
+            #     if ind != -1:
+            #         self.elems.pop(ind)
 
     def process_queries(self):
         n = int(input())
         for i in range(n):
             self.process_query(self.read_query())
+
 
 if __name__ == '__main__':
     bucket_count = int(input())
