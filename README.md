@@ -11,20 +11,20 @@ This repository contains materials and solutions for [Data Structures and Algori
 This specialization is a mix of theory and practice: you will learn algorithmic techniques for solving various computational problems and will implement about 100 algorithmic coding problems in a programming language of your choice. The specialization contains two real-world projects: Big Networks and Genome Assembly. You will analyze both road networks and social networks and will learn how to compute the shortest route between New York and San Francisco (1000 times faster than the standard shortest path algorithms!) Afterwards, you will learn how to assemble genomes from millions of short fragments of DNA and how assembly algorithms fuel recent developments in personalized medicine.
 
 Specialization consists of 6 courses:
+
 1. [Algorithmic Toolbox.](algorithmic-toolbox)
-2. [Data Structures.](data-structures)
-3. Algorithms on Graphs.
-4. Algorithms on Strings.
-5. Advanced Algorithms and Complexity.
-6. Genome Assembly Programming Challenge.
+2. [Data Structures.](Course 2)
+3. [Algorithms on Graphs.](Algorithms on Graphs)
+4. [Algorithms on Strings.](Algorithms on Strings)
+5. [Advanced Algorithms and Complexity.](Advanced Algorithms and Complexity)
+6. [Genome Assembly Programming Challenge.](Genome Assembly Programming Challenge)
 7. [Week 1 Programming Challenge.](week1_programming_challenges)
 8. [Week 2 Algorithmic Warmup.](week2_algorithmic_warmup)
 9. [Week 3 Greedy Algorithms.](week3_greedy_algorithms)
 10. [Week 4 Divide And Conquer.](week4_divide_and_conquer)
 11. [Week 5 Dynamic Programming.](week5_dynamic_programming1)
-12. [Week 6 Dynamic Programming.](week6_dynamic_programming2) 
+12. [Week 6 Dynamic Programming.](week6_dynamic_programming2)
 
-
-# Contact 
+# Contact
 
 The best way to get in touch with me is [on Instagram](https://www.instagram.com/subham.kumar032/).
