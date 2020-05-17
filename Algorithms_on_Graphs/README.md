@@ -15,14 +15,13 @@ Problem: [Adding Exits to a Maze](week1_decomposition1/2_connected_components/co
 
 ## Week 2
 
-[Study Notes](https://gist.github.com/akueisara/120d8d5b4e1a663c606987b00e6c3c15)
+[Study Notes](week2_decomposition2/decomposition2.pdf)
 
 ### Programming Assignment 2: Decomposition of Graphs
 
-Problem: [Checking Consistency of CS Curriculum](https://github.com/akueisara/algorithms-on-graphs/tree/master/week%202/acyclicity) </br>
-Problem: [Determining an Order of Courses](https://github.com/akueisara/algorithms-on-graphs/tree/master/week%202/toposort) </br>
-Advanced Problem: [Checking Whether Any Intersection in a City
-is Reachable from Any Other](https://github.com/akueisara/algorithms-on-graphs/tree/master/week%202/strongly_connected) </br>
+Problem: [Checking Consistency of CS Curriculum](week2_decomposition2/1_acyclicity/acyclicity.py) </br>
+Problem: [Determining an Order of Courses](week2_decomposition2/2_toposort/toposort.py) </br>
+Advanced Problem: [Checking Whether Any Intersection in a City is Reachable from Any Other](week2_decomposition2/3_strongly_connected/strongly_connected.py) </br>
 
 ## Week 3
 
