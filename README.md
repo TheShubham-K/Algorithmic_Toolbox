@@ -13,8 +13,8 @@ This specialization is a mix of theory and practice: you will learn algorithmic 
 Specialization consists of 6 courses:
 
 1. [Algorithmic Toolbox.](algorithmic-toolbox)
-2. [Data Structures.](Course 2)
-3. [Algorithms on Graphs.](Algorithms on Graphs)
+2. [Data Structures.](Course2)
+3. [Algorithms on Graphs.](AlgorithmsonGraphs)
 4. [Algorithms on Strings.](Algorithms on Strings)
 5. [Advanced Algorithms and Complexity.](Advanced Algorithms and Complexity)
 6. [Genome Assembly Programming Challenge.](Genome Assembly Programming Challenge)
