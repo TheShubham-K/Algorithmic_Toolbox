@@ -15,7 +15,7 @@ Specialization consists of 6 courses:
 1. [Algorithmic Toolbox.](algorithmic-toolbox)
 2. [Data Structures.](Course2)
 3. [Algorithms on Graphs.](AlgorithmsonGraphs)
-4. [Algorithms on Strings.](Algorithms on Strings)
+4. [Algorithms on Strings.](Algorithms_On_Strings)
 5. [Advanced Algorithms and Complexity.](Advanced Algorithms and Complexity)
 6. [Genome Assembly Programming Challenge.](Genome Assembly Programming Challenge)
 7. [Week 1 Programming Challenge.](week1_programming_challenges)
